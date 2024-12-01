@@ -1,0 +1,137 @@
+#megamenu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 12;
+    background-color: $dark;
+    transform: translateX(100vw);
+    transition: ease-in-out 300ms;
+    overflow: hidden;
+    
+
+    .columns{
+        height: calc(100% - 180px);
+        padding: 90px 0;
+        align-items: flex-end;
+
+        .colg{
+            width: 70%;
+        }
+
+        .cold{
+            width: 30%;
+
+            h4{
+                text-transform: uppercase;
+                font-size: 1rem;
+                color: $primary-color;
+                letter-spacing: 8px;
+                margin-top: 20px;
+            }
+
+            p,
+            a{
+                color: $light;
+                text-decoration: none;
+
+                strong{
+                    color : $primary-color;
+                    font-weight: 300;
+
+                    a{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .megamenu-list{
+        list-style: none;
+        
+            li{
+                width: fit-content;
+
+                a{
+                    color:$light;
+                    text-decoration: none;
+                    font-size: 2.8rem;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    line-height: 3.2rem;
+                    transition: all ease-in-out 300ms;
+
+                    &:hover{
+                        font-weight: 700;
+                        letter-spacing: 2px;
+                    }
+                }
+                
+
+                .sub-menu{
+                    transform-origin: top;
+                    max-height: 0;
+                    transition: max-height ease-in 200ms, opacity ease-in 300ms;
+                    opacity: 0;
+                    overflow: hidden; /* Ajouté pour éviter le débordement de contenu */
+                    margin-left: 50px; /* Conserve le même décalage de marge */
+                    padding: 0; /* Ajustez selon vos besoins */
+
+
+                    li{
+                        a{
+                            font-size: 1rem;
+                            line-height: 1.5rem;
+                        }
+                    }
+                }
+
+                &:hover{
+
+                    a{
+                        letter-spacing: 3px;
+                    }
+
+                    .sub-menu{
+                        max-height: 150px; /* Remettre à auto permet de s'adapter à la hauteur du contenu */
+                        opacity: 1;
+                    }
+                }
+            }
+
+            li + li {
+                margin-top: 10px;
+            }
+
+            .menu-item-has-children > a{
+                &::after{
+                    content: "";
+                    color: $primary-color;
+                    border-right: 3px solid $primary-color;
+                    border-bottom: 3px solid $primary-color;
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    transform: translate(60%, -10%) rotate(-45deg);   
+                    transition: all ease-in-out 300ms;         
+                }
+            }
+
+            .menu-item-has-children{
+                &:hover{
+                    a {
+                        &::after{
+                            content: "";
+                            transform: translate(60%, -40%) rotate(45deg);            
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+#megamenu.open{
+    transform: translateX(0);
+}

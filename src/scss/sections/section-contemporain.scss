@@ -1,0 +1,104 @@
+#section-contemporain{
+    padding : 200px 0 75px;
+    margin-top: 200px;
+    background-color: $light-gray;
+
+    .block-img{
+        width: calc(100% / 2.5);
+        min-width: 35%;
+        height: 400px;
+        margin-top: -400px;
+    }
+    
+    .container{
+        margin-top: 60px;
+        z-index: 11;
+        position: relative;
+        pointer-events: none;
+        gap: 0;
+        
+
+        h2{
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+            width: 70%;
+        }
+
+        p{
+            margin-top: 20px;
+        }
+    }
+}
+
+#section-contemporain-mirror{
+    padding : 50px 0;
+
+    .swiper-contempo-mirror{
+        height: 700px;
+        width: calc(50% + 100px);
+        margin-left: 0;
+        position: relative;
+
+        .swiper-wrapper{
+            .swiper-slide{
+                height: 700px;
+                overflow: hidden;
+            }
+        }
+    
+        .swiper-button-next-contempo-mirror,
+        .swiper-button-prev-contempo-mirror{
+            width: 50px;
+            height: 50px;
+            background-color: $primary-color;
+            top: auto;
+            left: calc(50vw - 50px);
+            right: auto;
+            position: absolute;
+            bottom: 0;
+                
+            &::after{
+                font-size: .8rem;
+                color : $light;
+            }
+        }
+    
+        .swiper-button-prev-contempo-mirror{
+            background-color: $light;
+            left: calc( 50vw - 100px);
+            right: auto;
+            position: absolute;
+    
+            &::after{
+                color : $middle-gray;
+            }
+        }
+    }
+    
+    .container{
+        margin-top: -380px;
+        z-index: 11;
+        position: relative;
+        pointer-events: none;
+        gap: 0;
+
+        .colg{
+            width: 50%;
+        }
+
+        .cold{
+            background-color: $light;
+            width: calc( 50% - 80px);
+            padding: 50px 0 50px 80px;
+            pointer-events: all;
+
+            h2{
+                margin-bottom: 30px;
+            }
+
+            p{
+                margin-top: 20px;
+            }
+        }
+    }
+}

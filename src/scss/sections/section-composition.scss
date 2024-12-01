@@ -1,0 +1,50 @@
+#compositionBox{
+     padding: 7px 0;
+
+     .columns{
+          gap: 3%;
+
+          .colg,
+          .cold,
+          .img_bx{
+               width: 30%;
+          }
+
+          .colg,
+          .cold{
+               ul{
+                    list-style: none;
+
+                    li{
+                         h3,
+                         p{
+                              font-size: 1rem;
+                         }
+
+                         h3{
+                              font-weight: 600;
+                         }
+                    }
+               }
+
+
+               .list_gch{
+                    li{
+                         h3,
+                         p{
+                              text-align: right;
+                         }
+                    }
+               }
+
+               .list_drt{
+                    li{
+                         h3,
+                         p{
+                              text-align: left5;
+                         }
+                    }
+               }
+          }
+     }
+}

@@ -1,0 +1,35 @@
+#section-mosaique{
+     .container{
+          width: 80vw;
+          .columns{
+               gap: 0;
+
+               .block-img,
+               .text_mosaique{
+                    width: calc(100% / 3);
+                    aspect-ratio: 1;
+               }
+
+               .text_mosaique{
+                    padding: 40px;
+                    width: calc((100% / 3) - 80px);
+
+                    h3{
+                         text-transform: uppercase;
+                         font-size: .8rem;
+                         letter-spacing: 5px;
+                         font-weight: 100;
+                    }
+
+                    h2{
+                         font-size: 2rem;
+                    }
+
+                    p{
+                         font-size: .9rem;
+                    }
+               }
+          }
+
+     } 
+}

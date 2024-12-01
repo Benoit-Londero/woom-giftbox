@@ -1,0 +1,52 @@
+#section-inspirations{
+    padding: 75px 0;
+    
+    .container{
+        h2,
+        p{
+            text-align: center;
+        }
+        
+        h2{
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        p{
+            margin: 30px auto;
+            em{
+                color: $primary-color;
+            }
+        }
+    }
+
+    .grid{
+        padding: 50px 0;
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: repeat(3, minmax(250px, 1fr));
+        grid-auto-rows: 260px;
+        grid-auto-flow: dense;
+
+        a{
+            overflow: hidden;
+
+
+            &:nth-child(odd),
+            &:nth-child(8n+4),
+            &:nth-child(12n+6){
+                grid-row: span 2;
+            }
+
+            &:hover{
+                img{
+                    filter: brightness(.7);
+                    width: 110%;
+                    height: 110%;
+                    margin-left: -5%;
+                    margin-top: -5%;
+                }
+            }
+        }
+    }
+}

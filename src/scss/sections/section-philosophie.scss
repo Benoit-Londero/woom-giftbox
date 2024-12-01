@@ -1,0 +1,76 @@
+#section-philosophie{
+    padding: 75px 0;
+
+    .block-img{
+        margin-left: 0;
+        width: 75vw;
+        height: 550px;
+    }
+
+    .container{
+        position: relative;
+        z-index: 10;
+        gap: 0;
+        pointer-events: none;
+
+        .colg{
+            position: relative;
+            width: 45%;
+            
+            &:after {
+                content: "";
+                position: absolute;
+                display: block;
+                left: -40px;
+                bottom: -40px;
+                background: $primary-color;
+                opacity: .5;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+        }
+
+        .cold{
+            padding: 80px 50px;
+            width: calc( 60% - 100px);
+            pointer-events: all;
+
+            h2{
+                font-size: .9rem;
+                text-transform: uppercase;
+                letter-spacing: 10px;
+                line-height: 2rem;
+            }
+    
+            h3{
+                font-size: 2.5rem;
+                position: relative;
+                width: fit-content;
+                font-weight: 300;
+                margin-bottom: 20px;
+                
+                strong{
+                    font-weight: 700;
+                }
+    
+                &::after{
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    background-color: $primary-color;
+                    opacity: .3;
+                    height: 30px;
+                    z-index: -1;
+                    position: absolute;
+                    top: 18px;
+                    left: 15px;
+                }
+            }
+
+            .cta{
+                font-weight: 400;
+            }
+        }
+    }
+}
