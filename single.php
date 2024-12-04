@@ -68,7 +68,7 @@ get_header();?>
                         //$prevthumbnail = get_the_post_thumbnail($prevPost->ID, array(100,100) ); ?>
                     
                     <?php echo '<a href="'.$cta.'" class="ctaTitle"><h3>'.$title .'</h3></a><p>'  .substr($textPrev,0,150) . '...</p>';?>
-                    <?php echo '<a href="'.$cta.'" class="cta">Lire plus    </a>';?>
+                    <?php echo '<a href="'.$cta.'" class="cta">Lire plus</a>';?>
                 </div>
             <?php endif;
 
